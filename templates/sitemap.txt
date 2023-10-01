@@ -1,0 +1,5 @@
+index.html
+article/index.html
+{% for article in articles %}
+article/{{article.slug}}.html
+{% endfor %}

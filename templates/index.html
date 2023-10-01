@@ -20,6 +20,7 @@
 			
 			body { background: white; font-family: 'Red Hat Mono', sans-serif; font-weight: 100; font-size: 18px; color: black; }
 			html {scroll-behavior: smooth; }
+			a { color:black; }
 			.container { width: 100%; }
 			.inner { width: 100%; max-width: 1100px; margin: 0 auto; }
 			.wider { width: 100%; padding-left: 50px; padding-right: 0px; box-sizing: border-box; }
@@ -48,7 +49,7 @@
 			.first div { margin-bottom: 10px; }
 			.pillar { padding-right: 50px; text-align: center; margin-bottom: 50px; }
 			.pillar img { width: 50px; margin: 0 auto; margin-bottom: 0px; }
-			.footer { margin-top: 200px; font-size: 80%; padding-bottom: 50px; text-align: center;}
+			.footer { margin-top: 200px; font-size: 80%; padding-bottom: 50px; text-align: center; }
 		</style>
 
 		
@@ -104,6 +105,56 @@
 			
 			
 			
+			<style>
+				.articles { gap : 15px; margin-top: 50px; }
+				.articles .article { display: block; text-decoration: none; color: black; margin-bottom: 50px; }
+				.articles .article .preview { padding-right: 50px; }
+				.articles .article h3 { margin-bottom: 0; }
+				.articles .article:hover h3 { text-decoration: underline;  }
+				.articles .article .author { margin-bottom: 15px; }
+				.articles .article img { object-fit: cover; width: 100%; max-height: 200px; }
+				.article.empty { border: 1px dashed black; text-align: center; padding: 30px; padding-top: 60px }
+			</style>
+			<div class="inner perspectives">
+				<h2>Fresh Thoughts</h2>
+				<p>A collection of recent posts and ideas from our members. If you like what you read - why not work with the author, or get more outside perspectives by briefing our community.</p>
+				
+				
+				<div class="pillars3 articles">
+					
+					{% for article in articles %}
+					<a href="article/{{article.slug}}.html" class="article">
+						<img src="{{article.metadata.image_primary.imgix_url}}?w=400">
+						<div class="preview">
+							<h3>{{article.metadata.title}}</h3>
+							<div class="author">by {{article.metadata.author.name}}</div>
+							<div class="description">{{article.metadata.description}}</div>
+						</div>
+					</a>
+					{% endfor %}
+					
+					<a href="/#join" class="article empty">
+						<h3>Want to see your thinking here?</h3>
+						Apply to join the community.
+					</a>
+					
+					<a href="/#join" class="article empty">
+						<h3>Want to see your thinking here?</h3>
+						Apply to join the community.
+					</a>
+					
+					
+					
+				</div>
+				
+				
+				<p><a href="article/index.html">Browse all articles</a></p>
+				
+			</div>
+			
+			
+			
+			
 			<div class="wider" id="join">
 				<h2 style="text-align: center; margin-bottom: 45px; margin-top: 150px ">The Outside Perspective Community</h2>
 				
@@ -147,9 +198,60 @@
 			
 			
 			<div class="inner" id="waitlist" style="max-width: 500px">
+				
 				<div class="col">
 					<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrAo2mehVu1gIjs2?backgroundColor=gray" frameborder="0" onmousewheel="" width="100%" height="869" style="background: transparent; border: 1px solid #ccc;"></iframe>
 				</div>
+
+<!--
+	<h3>Apply to join our community</h3>
+
+				<style>				
+					form input { margin-bottom: 30px;  font-family: inherit; font-size: inherit; padding: 5px; }
+				</style>
+				
+				<form
+				  action="https://buttondown.email/api/emails/embed-subscribe/outsideperspective"
+				  method="post"
+				  target="popupwindow"
+			      class="embeddable-buttondown-form"
+				  
+				  
+				  <label for="email" style="font-weight: bold">Your Email Address *</label>
+					<input
+					  type="email"
+					  name="email"
+					  placeholder="you@domain.com"
+					  required="required"
+					/>
+				  
+				  
+				  <label for="porfolio">Your linkedin.com URL or portfolio *</label>
+					<input
+					  id="subscribe_portfolio"
+						type="url"
+						name="metadata__portfolio"
+						required
+						placeholder="https://linkedin.com/in/yourusername"
+					/>
+					
+				  <label for="porfolio">Current work status *</label>	
+					<select name="metadata__workstatus" required style="font-size:inherit; margin-bottom: 30px; font-family: inherit; font-weight: normal;">
+						<option value=""></option>
+						<option value="se">Currently self-employed</option>
+						<option value="emp">Currently employed (and/or freelancing on the side)</option>
+						<option value="none">Not currently working</option>
+					</select>
+					
+				
+				  <input type="submit" value="Apply" />
+				  <p style="font-size: 80%;">
+					We don't ever share your email address, and you can unsubscribe any time.
+				  </p>
+				</form>
+				
+			-->
+				
 			</div>
 			
 			
@@ -158,24 +260,38 @@
 			
 			<div class="inner notse" style="max-width: 500px; margin-top: 100px; text-align: center;">
 				<h2>Looking for a strategist?</h3>
-				<p>You can post a brief into the community to reach our hundreds of award-winning world-leading independent strategists. </p>
-				<p>Just drop us an email outlining your project - and we'll do the rest.</p>
-				<p>Free if you're hiring directly (<a href="terms.html">read our terms</a>)</p>
+				<p>To reach hundreds of award-winning, world-class independent strategists, post a brief for free*.</p>
+				<p>Drop us an email outlining your project - and we'll do the rest.</p>
 				<p><a href="mailto:briefs@outsideperspective.co">briefs@outsideperspective.co</a></p>
-			</div>
-			
-			<div class="inner notse" style="max-width: 500px; margin-top: 100px; text-align: center;">
-				<h2>Looking for a strategy?</h3>
-				<p>Not sure what you need? Looking for outputs rather than people? Want to ask a question to the collective?</p>
-				<p>Jump on a discovery call with us, and we'll find the best way of help you solve your strategy needs.</p>
-				<p><a href="mailto:workwithus@outsideperspective.co">workwithus@outsideperspective.co</a></p>
+				<p style="font-size: 80%; margin-top: 20px;">* Free if you're hiring directly - <a href="terms.html">read our terms</a></p>
 			</div>
 			
 			
-
+			
+			<style>
+				.brands { display: grid;
+				  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+				  grid-gap: 10px; margin-top: 40px; }
+			</style>
+			<div class="inner" style="text-align: center; margin-top: 50px; ">
+				<p>Our members have supported businesses including:</p>
+				
+				{% set brands = ["accenture","adidas","bupa","ey","ftv","gofrendly","google","klarna","lego","linkedin","mind","morganstanley","nike","olx","penguin","png","sainsbury","sumup","unilever","unltd"] %}
+				<div class="brands">
+				{% for brand in brands %}
+				<div class="logo"><img src="/img/client-{{brand}}.png" style="width: 100px; opacity: 0.8"></div>
+				{% endfor %}
+				</div>
+			</div>
+			
+			
 		
-			<div class="inner footer">
-				outside perspective by <a href="https://foxlark.co">matthew knight</a>
+			<div class="footer inner">
+				Outside Perspective is a curated community<br/>
+				of independent, impartial, self-employed strategists,<br>
+				hosted by <a href="https://foxlark.co">Matthew Knight</a>.<br/>
+				Wanna join us? <a href="/#join">Apply</a><br>
+				Wanna work with us? <a href="/#workwithus">Post a brief.</a>
 			</div>
 			
 

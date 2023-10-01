@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+{% block main %}
+
+	<style>
+		
+		h1 { margin-bottom: 0; }
+		.author { display: inline-block; border-bottom: 1px solid black; padding-bottom: 15px; margin-bottom: 100px; padding-right: 100px; }
+		.article .body { max-width: 700px; margin-top: 100px; }
+		.image img { width: 100%; object-fit: cover; max-height: 600px; }
+		
+		
+	</style>
+	<div class="inner">
+		<h1>{{article.title}}</h1>
+		<div class="author">by <a href="#author">{{article.metadata.author.name}}</a></div>
+	</div>
+	<div class="inner">
+		<div class="image"><img src="{{article.metadata.image_primary.imgix_url}}?w=1200"></div>
+	</div>
+	<div class="article inner">
+		<div class="body">{{article.metadata.body|raw}}</div>
+	</div>
+	
+	
+	<style>
+		#author { margin-top: 250px; margin-bottom: 500px; }
+	</style>
+	<div id="author" class="inner">
+		<p>Fresh Thoughts from <strong>{{article.metadata.author.name}}</strong> - a member of Outside Perspective.</p>
+		<p>Connect and collaborate with {{article.metadata.author.name|split(' ')[0] }} at <a href="{{article.metadata.author.url}}">{{article.metadata.author.url}}</a></p>
+		<p>There are hundreds more world-class strategists available to work with - <a href="/#workwithus">post a brief</a>.</p>
+	</div>
+{% endblock %}

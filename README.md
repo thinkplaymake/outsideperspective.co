@@ -1,1 +1,0 @@
-# outsideperspective.co

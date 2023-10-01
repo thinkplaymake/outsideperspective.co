@@ -1,0 +1,17 @@
+{
+    "name": "matthewknight/outsideperspective.co",
+    "autoload": {
+        "psr-4": {
+            "outsideperspective\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "matthewknight",
+            "email": "matthew@thinkplaymake.co"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.7"
+    }
+}
