@@ -14,6 +14,7 @@
 	$generate_articles = true;
 	$generate_homepage = true;
 	$generate_workwithus = true;
+	$generate_terms = true;
 	
 	
 	
@@ -53,6 +54,12 @@
 	if ($generate_workwithus) {
 		$html = $twig->render('workwithus.html' );
 		file_put_contents(\outsideperspective\conf::output_path . '/workwithus.html', $html);
+	}
+	
+	// generate workwithus
+	if ($generate_terms) {
+		$html = $twig->render('terms.html' );
+		file_put_contents(\outsideperspective\conf::output_path . '/terms.html', $html);
 	}
 	
 	
