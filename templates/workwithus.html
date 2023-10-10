@@ -1,4 +1,9 @@
-{% extends '_base.html' %}
+{%
+	set page = {
+				"title":"Work with the world's best independent and impartial strategists - Outside Perspective.",
+				"description":"Share a brief with our curated community of strategists"
+			    }
+%}{% extends '_base.html' %}
 {% block main %}
 
 	<style>
@@ -12,7 +17,8 @@
 		
 	</style>
 	<div class="inner">
-		<h1>Work with impartial,<br/>independent strategists</h1>
+		<h1>Do better work<br/>
+		with impartial, independent strategists</h1>
 	</div>
 	<!--<div class="inner">
 		<div class="image"><img src="{{article.metadata.image_primary.imgix_url}}?w=1200"></div>
@@ -21,37 +27,32 @@
 		<div class="body">
 			
 			
-			<p><strong>No business can afford to ignore the importance of strategic work - but not every business needs or can afford full-time strategic staff.</strong></p>
+			<p>You know the benefits of working with independent strategists.</p>
+			<p>But finding good ones is hard.</p>
+			<p>Retaining the trusted ones is even harder.</p>
+			
+			<p>
+				<strong>We've gathered the smartest self-employed strategy people into a curated community.</strong>
+			</p>
+			
+			<p>You can post your brief, to find the best strategy on-demand.</p>
+			<p>No charge - if you follow our <a href="/terms.html">rules</a> of engagement.</p>
+			
+			
+			<p style="margin-top: 50px; margin-bottom: 50px; font-size: 150%"><a href="mailto:briefs@outsideperspective.co">[ post your brief ]</a></p>
+			
 			
 		</div>
 		
 	</div>
 	
-	<div class="wider">
-		<p style="font-size: 40px; style=max-width: 1200px;">Calling upon independent strategists gives your organisation experience across limitless sectors, disciplines and markets on-demand.</p>
-	</div>
 	
-	<div class="article inner">
-		<div class="body">
-			
-			<p>But <strong>finding trusted and respected strategists can be hard. So we're gathering them in a single place</strong>, a curated community of the best impartial, independent strategists.</p>
-			
-			<p>We're ex-CSO, ex-CMO, ex-Head of Strategy, ex-brand, ex-agency, ex-consultancy. We're a blend of super-senior down to established and emerging planners, strategists, specialists and generalists. We're commercial, communication, brand, insight, product, innovation, business, experience and integrated strategists. We're the brains behind some of the best work in the world.</p>
-			
-			<p>We're simplifying things. No recruiter costs. No subscriptions. No complex platform.
-			Just share your brief, and get responses from our curated community of top talent.</p>
-			
-		</div>
-	</div>
-	
-	
-
 	<style>
 		.brands { display: grid;
 		  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		  grid-gap: 10px; margin-top: 40px; }
 	</style>
-	<div class="inner" style="text-align: center; margin-top: 50px; ">
+	<div class="inner" style="text-align: center; margin-top: 100px; ">
 		<p>Our members have supported businesses including:</p>
 		
 		{% set brands = ["accenture","adidas","bupa","ey","ftv","gofrendly","google","klarna","lego","linkedin","mind","morganstanley","nike","olx","penguin","png","sainsbury","sumup","unilever","unltd"] %}
@@ -60,27 +61,22 @@
 		<div class="logo"><img src="/img/client-{{brand}}.png" style="width: 100px; opacity: 0.8"></div>
 		{% endfor %}
 		</div>
+		
+		<p style="max-width: 600px; margin: 0 auto;margin-top: 50px;  ">We're ex-CSO, ex-CMO, ex-Head of Strategy, ex-brand, ex-agency, ex-consultancy. We're a blend of super-senior down to established and emerging planners, strategists, specialists and generalists. We're commercial, communication, brand, insight, product, innovation, business, experience and integrated strategists. We're the brains behind some of the best work in the world.</p>
 	</div>	
 	
 	<div class="article inner">
 		<div class="body">		
 			
-			<h2 style="margin-top: 80px;">Three easy options ...</h2>
+			<h2 style="margin-top: 150px;">Other ways we can help ...</h2>
 			
-			<p>
-				<h3>A/ Post a brief - whenever you need.</h3>
-				We'll share the project with the community, and they'll be in touch directly. All we ask is that you uphold Freelance Friendly ways of working. It's free. <a href="mailto:briefs@outsideperspective.co">Email us your brief</a>
-			</p>
-				
+			<p><strong>Not sure of the brief?</strong><br/>Let's <a href="mailto:workwith@outsideperspective.co">write it together</a>.</p>
 			
-			<p>
-				<h3>B/ We'll help you write a brief.</h3>
-			Sometimes it's not clear who or what you need. Work with us to rapidly understand your project and figure out what sort of person, team or approach you need. This costs. <a href="mailto:workwithus@outsideperspective.co">Let's chat to understand how we can help.</a></p>
+			<p><strong>Need a strategy, not a strategist?</strong><br/>
+			We'll <a href="mailto:workwith@outsideperspective.co">just get it done</a>.</p>
 			
-			<p>
-				<h3>C/ Build your own talent network.</h3>
-			Get ahead of the brief. Work with us to create an engaged community of trusted individuals, based upon your business ambition and needs. This costs. <a href="mailto:workwithus@outsideperspective.co">Let's arrange a discovery call to get started.</a></p>
-			
+			<p><strong>Looking to build your own network of trusted talent?</strong><br/>
+			We <a href="mailto:workwith@outsideperspective.co">do this too</a>.</p>
 			
 		</div>
 	</div>
