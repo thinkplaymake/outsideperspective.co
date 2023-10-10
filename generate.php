@@ -50,25 +50,22 @@
 		print $html;
 	}
 	
-	// generate workwithus
-	if ($generate_workwithus) {
-		$html = $twig->render('workwithus.html' );
-		file_put_contents(\outsideperspective\conf::output_path . '/workwithus.html', $html);
-	}
-	
-	// generate workwithus
-	if ($generate_terms) {
-		$html = $twig->render('terms.html' );
-		file_put_contents(\outsideperspective\conf::output_path . '/terms.html', $html);
-	}
-	
-	
-	
-	
-	
 	// render sitemap
 	$html = $twig->render('sitemap.txt', ['articles'=>$articles['objects']] );
 	file_put_contents(\outsideperspective\conf::output_path . '/sitemap.txt', $html);
+	
+	
+	
+	$statics = ['workwithus', 'terms', 'on-the-waitlist'];
+	foreach( $statics as $static ) {
+		$html = $twig->render( $static . '.html' );
+		file_put_contents(\outsideperspective\conf::output_path . '/' . $static . '.html', $html);		
+	}
+
+	
+	
+	
+	
 	
 	
 	
