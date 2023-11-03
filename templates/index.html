@@ -122,8 +122,25 @@
 				
 				<div class="pillars3 articles">
 					
-					{% for article in articles %}
-					<a href="article/{{article.slug}}.html" class="article">
+					<a href="article/why-independent-thinking-adds-to-internal-strategy.html" class="article">
+						<img src="https://imgix.cosmicjs.com/962f89b0-598e-11ee-8d99-6566412c38cc-kaleidico-3V8xo5Gbusk-unsplash.jpg?w=400">
+						<div class="preview">
+							<h3>Why independent thinking adds to internal strategy</h3>
+							<div class="author">by Matthew Knight</div>
+							<div class="description">How bringing in outside perspectives makes internal work even stronger.</div>
+						</div>
+					</a>
+					
+					{% for article in articles|slice (0) %}
+					{% if article.slug != "why-independent-thinking-adds-to-internal-strategy" %}
+					
+					
+					{% set url = "article/" ~ article.slug ~ ".html" %}
+					{% if article.metadata.is_redirect == true %}
+					{% set url = article.metadata.source_url %}
+					{% endif %}
+					
+					<a href="{{url}}" class="article">
 						<img src="{{article.metadata.image_primary.imgix_url}}?w=400">
 						<div class="preview">
 							<h3>{{article.metadata.title}}</h3>
@@ -131,12 +148,8 @@
 							<div class="description">{{article.metadata.description}}</div>
 						</div>
 					</a>
+					{% endif %}
 					{% endfor %}
-					
-					<a href="/#join" class="article empty">
-						<h3>Want to see your thinking here?</h3>
-						Apply to join the community.
-					</a>
 					
 					<a href="/#join" class="article empty">
 						<h3>Want to see your thinking here?</h3>

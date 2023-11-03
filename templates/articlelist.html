@@ -1,5 +1,5 @@
 {%
-	set page = {"title":"Fresh Thoughts. Articles from members of Outside Perpective - a curated community of independent and freelance strategic people"}
+	set page = {"title":"Fresh Thoughts. Articles from members of Outside Perspective - a curated community of independent and freelance strategic people"}
 %}{% extends '_base.html' %}
 {% block main %}
 
@@ -13,12 +13,28 @@
 		<p>Read a collection of ideas, thinking and outside perspectives from a selection of our members. All authors are available to collaborate with - just <a href="/#workwithus">post a brief</a></p>
 		
 		
+		<style>
+			.articlelist { margin-top: 50px; }
+			.articlelist a { display: grid; grid-template-columns: 400px auto; gap: 30px;  margin-bottom: 30px; text-decoration:none; }
+			.articlelist h3 { margin-bottom: 0; }
+			.articlelist .author { margin-bottom: 30px; }
+			.articlelist a:hover h3 { text-decoration: underline; }
+			
+		</style>
 	
 		
 		<div class="articlelist">
 			
 			{% for article in articles %}
-			<a href="/article/{{article.slug}}.html" class="article">
+			
+			
+			{% set url = "/article/" ~ article.slug ~ ".html" %}
+			{% if article.metadata.is_redirect == true %}
+			{% set url = article.metadata.source_url %}
+			{% endif %}
+			
+			
+			<a href="{{url}}" class="article">
 				<div class="image"><img src="{{article.metadata.image_primary.imgix_url}}?w=400"></div>
 				<div class="preview">
 					<h3>{{article.metadata.title}}</h3>

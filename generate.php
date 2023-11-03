@@ -10,7 +10,7 @@
 
 
 	// fetch and generate flags.
-	$fetch_articles = false;
+	$fetch_articles = true;
 	$generate_articles = true;
 	$generate_homepage = true;
 	$generate_workwithus = true;
@@ -47,7 +47,6 @@
 	if ($generate_homepage) {
 		$html = $twig->render('index.html', ['articles'=>$articles['objects']] );
 		file_put_contents(\outsideperspective\conf::output_path . '/index.html', $html);
-		print $html;
 	}
 	
 	// render sitemap
@@ -56,13 +55,14 @@
 	
 	
 	
-	$statics = ['workwithus', 'terms', 'on-the-waitlist'];
+	$statics = ['workwithus', 'terms', 'on-the-waitlist', 'clienthandbook'];
 	foreach( $statics as $static ) {
 		$html = $twig->render( $static . '.html' );
 		file_put_contents(\outsideperspective\conf::output_path . '/' . $static . '.html', $html);		
 	}
 
 	
+	print file_get_contents('docs/clienthandbook.html');
 	
 	
 	

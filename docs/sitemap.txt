@@ -1,3 +1,4 @@
 index.html
 article/index.html
+article/is-human-creativity-fading-away.html
 article/why-independent-thinking-adds-to-internal-strategy.html
