@@ -117,7 +117,9 @@
 			</style>
 			<div class="inner perspectives">
 				<h2>Fresh Thoughts</h2>
-				<p>A collection of recent posts and ideas from our members. If you like what you read - why not work with the author, or get more outside perspectives by briefing our community.</p>
+				<p>A collection of recent posts and ideas from our members. If you like what you read - why not work with the author, or get more outside perspectives by briefing our community</p>
+				
+				<p><strong>Want to see your thinking here?</strong> <a href="#join">Apply to join the community.</a></strong>
 				
 				
 				<div class="pillars3 articles">
@@ -134,7 +136,6 @@
 					{% for article in articles|slice (0) %}
 					{% if article.slug != "why-independent-thinking-adds-to-internal-strategy" %}
 					
-					
 					{% set url = "article/" ~ article.slug ~ ".html" %}
 					{% if article.metadata.is_redirect == true %}
 					{% set url = article.metadata.source_url %}
@@ -150,12 +151,6 @@
 					</a>
 					{% endif %}
 					{% endfor %}
-					
-					<a href="/#join" class="article empty">
-						<h3>Want to see your thinking here?</h3>
-						Apply to join the community.
-					</a>
-					
 					
 					
 				</div>

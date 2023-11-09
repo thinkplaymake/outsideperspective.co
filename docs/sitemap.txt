@@ -1,4 +1,5 @@
 index.html
 article/index.html
+article/why-strategy-needs-a-rebrand.html
 article/is-human-creativity-fading-away.html
 article/why-independent-thinking-adds-to-internal-strategy.html
