@@ -1,5 +1,5 @@
-index.html
-article/index.html
+https://outsideperspective.co/index.html
+https://outsideperspective.co/article/index.html
 {% for article in articles %}
-article/{{article.slug}}.html
+https://outsideperspective.co/article/{{article.slug}}.html
 {% endfor %}

@@ -1,5 +1,5 @@
-index.html
-article/index.html
-article/why-strategy-needs-a-rebrand.html
-article/is-human-creativity-fading-away.html
-article/why-independent-thinking-adds-to-internal-strategy.html
+https://outsideperspective.co/index.html
+https://outsideperspective.co/article/index.html
+https://outsideperspective.co/article/why-strategy-needs-a-rebrand.html
+https://outsideperspective.co/article/is-human-creativity-fading-away.html
+https://outsideperspective.co/article/why-independent-thinking-adds-to-internal-strategy.html
